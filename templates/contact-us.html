@@ -1,0 +1,112 @@
+{% include 'header.html' %}
+{% load static %}
+<!-- ======================= Banner Start ============================== -->
+<div class="banner" id="contact-banner" data-aos="fade-down">
+    <div class="row px-5">
+
+        {% if request.path == '/contact/' %}
+        <h2>Contact US</h2>
+        <p>Home/contact-us/</p>
+        {% endif %}
+    </div>
+
+</div>
+<!-- ======================= Banner End ============================== -->
+
+<!-- Contact Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <h1 class="text-center mb-5 wow fadeInUp heading" data-aos="fade-down">Contact For Any Query</h1>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="row gy-4">
+                    <div class="col-md-4 wow fadeIn"  data-aos="fade-down">
+                        <div class="d-flex align-items-center bg-light rounded p-4">
+                            <div class="bg-white border rounded d-flex flex-shrink-0 align-items-center justify-content-center me-3 mr-2"
+                                style="width: 45px; height: 45px;">
+                                <i class="fa fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <span>Mithapur Farm Area,Near Aryabhatta Knowledge University Mithapur,
+                                Patna-800001</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeIn"  data-aos="fade-down">
+                        <div class="d-flex align-items-center bg-light rounded p-4">
+                            <div class="bg-white border rounded d-flex flex-shrink-0 align-items-center justify-content-center me-3 mr-2"
+                                style="width: 45px; height: 45px;">
+                                <i class="fa fa-envelope-open text-primary"></i>
+                            </div>
+                            <span>annuplacementoffical@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeIn"  data-aos="fade-down">
+                        <div class="d-flex align-items-center bg-light rounded p-4">
+                            <div class="bg-white border rounded d-flex flex-shrink-0 align-items-center justify-content-center me-3 mr-2"
+                                style="width: 45px; height: 45px;">
+                                <i class="fa fa-phone-alt text-primary"></i>
+                            </div>
+                            <span>+91 8579898230, 9508123366</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInUp"  data-aos="fade-up">
+                <iframe class="position-relative rounded w-100 h-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332.0753667617966!2d85.1359957747931!3d25.59289635056202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x73e64ea6b59572fd!2zMjXCsDM1JzMzLjYiTiA4NcKwMDgnMTAuNCJF!5e1!3m2!1sen!2sin!4v1652911569927!5m2!1sen!2sin"
+                    frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+            <div class="col-md-6 mt-3"  data-aos="fade-up">
+                <div class="wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="mb-4">Find The Prefect Job For Your Skills and Interest, Annu Placement<br>Helped To Find
+                        Prefect Job In
+                        Your
+                        Local City. <b>Contact Now</b> <a href="#">Annu Placement</a>.</p>
+                    <form  method="POST" action="/thanks/">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6 my-2">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name">
+
+                                </div>
+                            </div>
+                            <div class="col-md-6 my-2">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email">
+
+                                </div>
+                            </div>
+                            <div class="col-12 my-2">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="mobile" placeholder="Your Phone Number">
+
+                                </div>
+                            </div>
+                            <div class="col-12 my-2">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                        style="height: 150px" name="massage"></textarea>
+
+                                </div>
+                            </div>
+                            <div class="col-12 my-2">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+
+
+
+
+
+
+
+{% include 'footer.html' %}

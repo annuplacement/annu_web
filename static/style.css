@@ -1,0 +1,789 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main {
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(249, 247, 247);
+}
+
+/*===== Navbar =====*/
+
+.main .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgb(4, 180, 239);
+    padding-right: 20px;
+    box-shadow: 0 0.5rem 1rem rgba(5, 5, 5, 0.35) !important;
+}
+
+.main .mobile-menu {
+    outline: 0;
+    border: 0;
+}
+
+.main .mobile-menu i {
+    color: white;
+    font-size: 25px;
+}
+
+.main .navbar .logo {
+    padding: 0 0 0 30px;
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+.main .navbar .nav-item a {
+    margin: 0 5px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    transition: 0.5s;
+    border-radius: 10px;
+    border: 1px solid rgb(4, 180, 239);
+}
+
+.main .navbar .nav-item a.active {
+    border-radius: 10px;
+    background-color: rgba(6, 165, 213, 0.598);
+}
+
+.main .navbar .nav-item a:hover {
+    background-color: rgb(4, 180, 239);
+    border: 1px solid whitesmoke;
+}
+
+.main .dropdown-menu {
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid whitesmoke;
+    background-color: rgb(4, 180, 239);
+    padding: 0 10px;
+}
+
+/*===== slider =====*/
+.main .homepage {
+    margin-top: 65px;
+    padding: 0 0;
+    background-color: black;
+}
+
+.main .homepage .carousel {
+    width: 100vw;
+    height: 90vh;
+}
+
+.main .homepage .carousel-item {
+    transition: all 0.5s ease-in-out;
+}
+
+.main .homepage .carousel-inner img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    opacity: 60%;
+}
+
+.main .homepage .carousel-inner .container .carousel-caption {
+    border-left: 5px solid rgb(0, 106, 255);
+
+}
+
+.main .homepage .carousel-inner .container h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.main .homepage .carousel-inner .container p {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.main .homepage .carousel-inner .container p a {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.main .btn:hover {
+    transform: scale(1.1);
+}
+
+/*===== Search =====*/
+.homepage .search {
+    width: 100%;
+    height: auto;
+    background-color: rgb(4, 180, 239);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.homepage .search .input-1 {
+    margin: 25px 10px;
+    width: 20vw;
+}
+
+.homepage .search .input-1 input {
+    width: 20vw;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.homepage .search .input-2 {
+    margin: 25px 10px;
+    width: 20vw;
+}
+
+.homepage .search .input-2 select {
+    padding: 0 10px;
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.homepage .search .input-3 {
+    margin: 25px 10px;
+    width: 20vw;
+}
+
+.homepage .search .input-3 button {
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+/* ===== Explore ======*/
+.explore-section,
+.about-section {
+    padding-top: 7vh;
+    width: 100vw;
+    min-height: 60vh;
+}
+
+.main .heading {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.explore-section .contenter {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.explore-section .contenter .item-div {
+    position: relative;
+    width: calc(30% - 20px);
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0.5rem 1rem rgba(5, 5, 5, 0.35) !important;
+    border-radius: 10px;
+    animation-name: inter;
+    animation-duration: .8s;
+}
+
+.explore-section .contenter .item-div a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.explore-section .contenter .item-div a h6 {
+    font-size: 1.4rem;
+    color: #222;
+    font-weight: 600;
+}
+
+/*====== About =======*/
+.about-section .contenter {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.about-section .contenter .left-side {
+    margin-top: 20px;
+    width: 40vw;
+    height: 40vh;
+    box-sizing: border-box;
+}
+
+.about-section .contenter .left-side img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.about-section .contenter .right-side {
+    margin-top: 15px;
+    width: 45vw;
+    height: auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.about-section .contenter .right-side h1 {
+    font-size: 2.5rem;
+}
+
+.about-section .contenter .right-side p span {
+    color: rgb(0, 106, 255);
+    font-weight: 600;
+}
+
+.about-section .contenter .right-side h5 {
+    color: rgb(0, 106, 255);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.about-section .contenter .right-side p i {
+    padding-right: 10px;
+}
+
+/*======== Newslatter ========*/
+.main .newslatter-section {
+    margin-top: 9vh;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(2, 103, 245, 0.782), rgba(7, 162, 223, 0.434)), url(img/news.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.main .newslatter-section .contenter {
+    width: 80%;
+    height: 100%;
+    color: white;
+}
+
+.main .newslatter-section .contenter p a {
+    border: 2px solid whitesmoke;
+    margin-top: 15px;
+}
+
+/*======== Resume ========*/
+.main .resume-section {
+    margin-top: 9vh;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 106, 255);
+    padding: 10vw;
+}
+
+.main .resume-section .contenter {
+    margin: auto;
+    width: 90%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .resume-section .contenter .textbox {
+    display: inline-block;
+    width: 60%;
+    height: auto;
+}
+
+.main .resume-section .contenter .textbox h1 {
+    font-size: 2.5rem;
+}
+
+.main .resume-section .contenter .textbox #customFile {
+    width: 90%;
+}
+
+.main .resume-section .contenter .image-box {
+    width: 30%;
+    height: auto;
+    margin-right: 30px;
+}
+
+.main .resume-section .contenter .image-box img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*======== Jobs ========*/
+
+.main .jobs {
+    margin-top: 7vh;
+}
+
+.main .jobs .contenter {
+    width: 75vw;
+    height: auto;
+}
+
+.main .jobs .contenter .job-list {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0.5rem 1rem rgba(5, 5, 5, 0.1) !important;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 20px !important;
+}
+
+.main .jobs .contenter .job-list img {
+    width: 5rem;
+    height: auto;
+    margin: 0 15px;
+}
+
+.main .jobs .contenter .job-list .text-area {
+    width: 40vw;
+}
+
+.main .jobs .contenter .job-list .text-area p span {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.main .jobs .contenter .job-list .action-area {
+    width: 20vw;
+}
+
+.main .jobs .contenter .job-list .action-area p {
+    padding-top: 5px;
+}
+
+/*======== Footer ========*/
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+    border-color: var(--light);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .form-control {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+
+
+/*=========== Banner ============*/
+.main .banner {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(30, 29, 29, 0.6)), url(img/Contact.jpg) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#contact-banner {
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(30, 29, 29, 0.6)), url(img/Contact.jpg) no-repeat center !important;
+}
+
+#about-banner {
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(30, 29, 29, 0.6)), url(img/news.jpg) no-repeat center !important;
+}
+
+#jobs-banner {
+    background: linear-gradient(rgba(21, 21, 21, 0.5), rgba(30, 29, 29, 0.6)), url(img/job.jpg) no-repeat center !important;
+    background-size: cover;
+}
+
+/*============================================== About us ===============================================*/
+
+.main .banner .row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.main .banner .row h2 {
+    position: relative;
+    font-size: 3.8rem;
+}
+
+.main .banner .row p {
+    position: relative;
+    font-size: 1.2rem;
+}
+
+/*============================================== Privicy page ===============================================*/
+.main .privacy-div {
+    padding: 6vh 7vw;
+}
+
+/*============================================== Contact us ===============================================*/
+.main .map {
+    width: 100% !important;
+}
+
+.main .map iframe {
+    width: 100%;
+    height: 50vh;
+}
+
+@keyframes inter {
+    from {
+        top: 60px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+/*========== Media Quray ===========*/
+@media (max-width:991px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .main .homepage .carousel-inner .container h1 {
+        font-size: 2.5em;
+    }
+
+    .main .homepage .carousel-inner .container p {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+
+    .main .homepage .carousel-inner .container p a {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .about-section .contenter {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-section .contenter .left-side {
+        margin: 20px 0;
+        width: 80vw;
+        height: 50vh;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .about-section .contenter .right-side {
+        margin: 20px 0;
+        width: 90vw;
+        height: auto;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width:915px) {
+    .explore-section .contenter {
+        flex-direction: row;
+    }
+
+    .explore-section .contenter .item-div {
+        width: 45%;
+        margin: 15px auto;
+    }
+
+    .main .jobs .contenter .job-list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main .jobs .contenter .job-list .text-area p {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    .main .jobs .contenter .job-list .action-area {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:1260px) {
+    .main .resume-section .contenter .textbox h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:852px) {
+    .main .resume-section .contenter .textbox h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:648px) {
+    .main .resume-section .contenter {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+
+    .main .resume-section .contenter .textbox {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main .resume-section .contenter .image-box {
+        width: 60%;
+        margin: auto;
+        padding-bottom: 5vh;
+    }
+
+    .main .resume-section .contenter .textbox h1 {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width:620px) {
+    .explore-section .contenter {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .explore-section .contenter .item-div {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:555px) {
+    .main .homepage {
+        margin-top: 45px;
+
+    }
+
+    .homepage .search {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .homepage .search .input-1 {
+        width: 70%;
+        margin: 10px 0;
+    }
+
+    .homepage .search .input-1 input {
+        width: 100%;
+    }
+
+    .homepage .search .input-2 {
+        width: 70%;
+        margin: 0 0 10px 0;
+    }
+
+    .homepage .search .input-3 {
+        margin: 0 0 10px 0;
+        width: 70%;
+    }
+
+    .homepage .search .input-3 button {
+        background-color: white;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+    }
+
+}
+
+@media (max-width:500px) {
+    .main .navbar .logo {
+        font-size: 25px;
+    }
+
+    .main .homepage .carousel-inner .container h1 {
+        font-size: 2em;
+    }
+
+}
+
+@media (max-width:770px) {
+    .main .footer a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .main .footer h5 {
+        text-align: center;
+    }
+}
+
+@media (max-width:345px) {
+    .main .navbar .logo {
+        padding-left: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:400px) {
+    .heading {
+        font-size: 30px !important;
+    }
+
+    .explore-section .contenter {
+        padding: 0 15px !important;
+    }
+
+    .about-section .contenter .right-side h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .about-section .contenter .left-side {
+        padding: 0 15px 0 0 !important;
+    }
+
+    .about-section .contenter .right-side {
+        padding: 0 15px 0 0 !important;
+    }
+
+    .main .newslatter-section {
+        padding: 10px !important;
+    }
+
+    .main .newslatter-section .contenter p {
+        font-size: 13px !important;
+    }
+
+    .main .newslatter-section .contenter p a {
+        font-size: 13px !important;
+    }
+
+    .main .newslatter-section .contenter h1 {
+        font-size: 22px !important;
+    }
+
+    .main .jobs .contenter {
+        width: 85vw !important;
+    }
+
+    .main .jobs .contenter .job-list img {
+        width: 3rem !important;
+    }
+
+    .main .jobs .contenter .job-list .text-area {
+        width: 95% !important;
+    }
+
+    .main .jobs .contenter .job-list .text-area p span {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .main .jobs .contenter .job-list .action-area {
+        width: 100% !important;
+    }
+
+    .main .jobs .contenter .job-list .action-area p,
+    .main .jobs .contenter .job-list .action-area a {
+        font-size: 15px !important;
+    }
+
+
+
+}

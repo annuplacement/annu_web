@@ -1,0 +1,1 @@
+web: gunicorn Annu_Placement.wsgi --log-file -

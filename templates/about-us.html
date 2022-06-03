@@ -1,0 +1,52 @@
+{% include 'header.html' %}
+{% load static %}
+
+    <!-- ======================= Banner Start ============================== -->
+    <div class="banner" id="about-banner"  data-aos="fade-down">
+        <div class="row px-5">
+          {% if request.path == '/about-us/' %}
+          <h2>About US</h2>
+          <p>Home/About-US/</p>
+        {% endif %}
+
+        </div>
+        
+      </div>
+      <!-- ======================= Banner End ============================== -->
+      
+    <!-- ======================= About Start ============================== -->
+    <div class="about-section">
+    <h1 class="heading"  data-aos="fade-down">About US</h1>
+    <div class="contenter">
+        <div class="left-side" data-aos="fade-up">
+        <img src="{% static 'img/ab.png'%}">
+        </div>
+        <div class="right-side" data-aos="fade-up">
+        <h1>We Help To Get The Best Job And Find A Talent</h1>
+        <p><span>Annu Placement</span> acts as a networking link between the recruiting companies in various sectors
+            and the job-seekers </p>
+        <h5>How To Get Job-</h5>
+        <p><i class="fa fa-check text-primary"></i>Vist Office With Our Documents & Certificate,</p>
+        <p><i class="fa fa-check text-primary"></i>Fill Registration Form And Give A Interview,</p>
+        <p><i class="fa fa-check text-primary"></i>Get Your Prefect Job.</p>
+        <a class="btn btn-primary" href="">Contact Now</a>
+        </div>
+    </div>
+    </div>
+    <!-- ======================= About End ============================== -->
+    <!-- ======================= Newslatter Start ============================== -->
+  <div class="newslatter-section p-5"  data-aos="fade-down">
+    <div class="contenter">
+      <h1><b>Get The Most Valuable Jobs And Updates</b></h1>
+      <p>Get Letest Jobs & Updates Notification For Free.</p>
+      <div class="position-relative mx-auto">
+        <input class="form-control w-100 py-3 ps-4 pe-5" type="email" name="user-email"
+          placeholder="Your email">
+          <p><a class="btn btn-lg btn-primary" href="#" role="button"><b>Subscribe</b></a></p>
+      </div>
+    </div>
+  </div>
+  <!-- ======================= Newslatter End ============================== -->
+
+
+ {% include 'footer.html' %}

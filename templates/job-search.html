@@ -1,0 +1,43 @@
+{% include 'header.html' %}
+{% load static %}
+  <!-- ======================= Banner Start ============================== -->
+  <div class="banner" id= "jobs-banner">
+    <div class="row px-5">
+      {% if request.path == '/searchview/' %}
+      <h2>Relatad Jobs</h2>
+      <p>Home/search-jobs/</p>
+        {% endif %}
+      
+    </div>
+  </div>
+  <!-- ======================= Banner End ============================== -->
+ 
+  <!-- ======================= Jobs Start ============================== -->
+  <section class="jobs" data-aos="fade-down">
+    <h1 class="heading">Filter Jobs</h1>
+    <div class="contenter p-3 m-auto">
+      <!-- === Job Listing div start=== -->
+      {% for data in job_data %}
+      <div class="job-list m-auto p-3" data-aos="fade-up">
+        <img src="{% static 'img/logo.png'%}" alt="Jobs">
+        <div class="text-area p-2">
+          <h4>{{data.job_title}}</h4>
+          <p><span><i class="fa fa-map-marker-alt text-primary m-1"></i> {{data.job_address}}</span> <span><i
+                class="far fa-clock text-primary m-1"></i> {{data.job_cateagry}}</span> <span><i
+                class="far fa-money-bill-alt text-primary m-1"></i> {{data.job_salary}}</span></p>
+        </div>
+        <div class="action-area text-center p-2">
+          <a class="btn btn-lg btn-primary" href="/jobsdetails/{{data.id}}" role="button">Job Details</a>
+          <p><i class="far fa-calendar-alt text-primary m-1"></i> Date: 1 April 2022</p>
+        </div>
+      </div>
+      {% endfor %}
+      
+      <!-- === Job Listing div end=== -->
+    </div>
+  </section>
+  <!-- ======================= Jobs End ============================== -->
+ 
+
+ 
+ {% include 'footer.html' %}

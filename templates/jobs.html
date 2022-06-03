@@ -1,0 +1,113 @@
+{% include 'header.html' %}
+{% load static %}
+  <!-- ======================= Banner Start ============================== -->
+  <div class="banner" id= "jobs-banner">
+    <div class="row px-5">
+      {% if request.path == '/jobs/' %}
+      <h2>Letest Jobs</h2>
+      <p>Home/Jobs/</p>
+        {% endif %}
+      
+    </div>
+    
+  </div>
+  <!-- ======================= Banner End ============================== -->
+ 
+  <!-- ======================= Jobs Start ============================== -->
+  <section class="jobs" data-aos="fade-down">
+    <h1 class="heading">All Jobs Listing</h1>
+    <div class="contenter p-3 m-auto">
+      <!-- === Job Listing div start=== -->
+      {% for data in job_data %}
+      <div class="job-list m-auto p-3" data-aos="fade-up">
+        <img src="{% static 'img/logo.png'%}" alt="Jobs">
+        <div class="text-area p-2">
+          <h4>{{data.job_title}}</h4>
+          <p><span><i class="fa fa-map-marker-alt text-primary m-1"></i> {{data.job_address}}</span> <span><i
+                class="far fa-clock text-primary m-1"></i> {{data.job_cateagry}}</span> <span><i
+                class="far fa-money-bill-alt text-primary m-1"></i> {{data.job_salary}}</span></p>
+        </div>
+        <div class="action-area text-center p-2">
+          <a class="btn btn-lg btn-primary" href="/jobsdetails/{{data.id}}" role="button">Job Details</a>
+          <p><i class="far fa-calendar-alt text-primary m-1"></i> Date: 1 April 2022</p>
+        </div>
+      </div>
+      {% endfor %}
+      <!-- === Job Listing div end=== -->
+    </div>
+  </section>
+  <!-- ======================= Jobs End ============================== -->
+
+  <!-- ======================= Resume Start ============================== -->
+
+  <div class="resume-section p-5" id="resume">
+    <div class="contenter"  data-aos="fade-up">
+      <div class="textbox">
+        <h1><b>Get The Most Valuable Jobs, Just Drop Your CV Now.</b></h1>
+        <form action="/cv_feedback/" method="post">
+          {% csrf_token %}
+        <label class="form-label" for="customFile">Uploade Resume</label>
+        <input type="file" class="form-control" id="customFile" name="cv" />
+        <button class="btn btn-primary px-3 py-2 mt-3" type="submit" style="background-color: rgb(0, 170, 255);">Upload CV</button>
+      </form>
+      </div>
+      <div class="image-box">
+        <img src="{% static 'img/cv.png'%}" alt="resume.png">
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= Resume End ============================== -->
+  
+   <!-- ======================= Explore Start ============================== -->
+   <div class="explore-section" id="Explore">
+    <h1 class="heading" data-aos="fade-up">Explore By Category</h1>
+    <div class="contenter">
+      <div class="item-div" data-aos="fade-up">
+        <a class="cat-item rounded p-4" href="/searchview/?keyboard=&category=Marketing&location=Location/">
+          <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+          <h6 class="mb-3">Marketing</h6>
+          <p class="mb-0">Explore Now<i class="fa fa-angle-right text-primary me-2 ml-2"></i><i class="fa fa-angle-right text-primary me-2 "></i></p>
+        </a>
+      </div>
+      <div class="item-div" data-aos="fade-up">
+        <a class="cat-item rounded p-4" href="/searchview/?keyboard=&category=Customer+Services&location=Location/">
+          <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+          <h6 class="mb-3">Customer Services</h6>
+          <p class="mb-0">Explore Now<i class="fa fa-angle-right text-primary me-2 ml-2"></i><i class="fa fa-angle-right text-primary me-2 "></i></p>
+        </a>
+      </div>
+      <div class="item-div" data-aos="fade-up">
+        <a class="cat-item rounded p-4" href="/searchview/?keyboard=&category=Human+Resource&location=Location/">
+          <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+          <h6 class="mb-3">Human Resource</h6>
+          <p class="mb-0">Explore Now<i class="fa fa-angle-right text-primary me-2 ml-2"></i><i class="fa fa-angle-right text-primary me-2 "></i></p>
+        </a>
+      </div>
+      <div class="item-div" data-aos="fade-up">
+        <a class="cat-item rounded p-4" href="/searchview/?keyboard=&category=Teaching+%26+Education&location=Location/">
+          <i class="fa fa-3x fa-book-reader text-primary mb-4"></i>
+          <h6 class="mb-3">Teaching & Education</h6>
+          <p class="mb-0">Explore Now<i class="fa fa-angle-right text-primary me-2 ml-2"></i><i class="fa fa-angle-right text-primary me-2 "></i></p>
+        </a>
+      </div>
+      <div class="item-div" data-aos="fade-up">
+        <a class="cat-item rounded p-4" href="/searchview/?keyboard=&category=Sales+%26+Communication&location=Location/">
+          <i class="fa fa-3x fa-hands-helping text-primary mb-4"></i>
+          <h6 class="mb-3">Sales & Communication</h6>
+          <p class="mb-0">Explore Now<i class="fa fa-angle-right text-primary me-2 ml-2"></i><i class="fa fa-angle-right text-primary me-2 "></i></p>
+        </a>
+      </div>
+      <div class="item-div" data-aos="fade-up">
+        <a class="cat-item rounded p-4" href="/searchview/?keyboard=&category=Business+Development&location=Location/">
+          <i class="fa fa-3x fa-chart-line text-primary mb-4"></i>
+          <h6 class="mb-3">Business Development</h6>
+          <p class="mb-0">Explore Now<i class="fa fa-angle-right text-primary me-2 ml-2"></i><i class="fa fa-angle-right text-primary me-2 "></i></p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- ======================= Explore End ============================== -->
+
+ 
+ {% include 'footer.html' %}
